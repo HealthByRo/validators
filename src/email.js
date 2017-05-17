@@ -1,4 +1,4 @@
-const regexp = !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+const regexp = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
 export const email = (value) => {
   if (value && (regexp.test(value))) {
@@ -7,4 +7,3 @@ export const email = (value) => {
 
   return undefined;
 };
-
