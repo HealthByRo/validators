@@ -1,5 +1,5 @@
 export const requiredIf = (otherFieldName, errorText) => (value, values) => {
-  if (values[otherFieldName]) {
+  if (values[otherFieldName] && !value) {
     return errorText;
   }
 
