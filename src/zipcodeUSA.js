@@ -7,3 +7,6 @@ export const zipcodeUSA = (value) => {
 
   return undefined;
 };
+
+export default zipcodeUSA;
+

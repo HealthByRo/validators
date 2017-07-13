@@ -7,3 +7,5 @@ export const setOfPasswordValidators = [
   passwordMinLength,
   passwordFormat,
 ];
+
+export default setOfPasswordValidators;

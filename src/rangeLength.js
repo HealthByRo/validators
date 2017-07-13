@@ -5,3 +5,5 @@ export const rangeLength = (min, max, label) => (value) => {
 
   return undefined;
 };
+
+export default rangeLength;

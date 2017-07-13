@@ -9,3 +9,5 @@ export const fieldsMatch = (otherFieldName, errorText) => (value, values) => {
 
   return undefined;
 };
+
+export default fieldsMatch;

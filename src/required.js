@@ -5,3 +5,5 @@ export const required = (value) => {
 
   return undefined;
 };
+
+export default required;
