@@ -1,0 +1,14 @@
+{
+  "collectCoverageFrom": [
+    "src/*.{js,jsx}",
+    "!src/*.test{s}.{js,jsx}"
+  ],
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ],
+  "moduleNameMapper": {
+    "\\.(css|less)$": "identity-obj-proxy"
+  },
+  "testRegex": "src/.*\\.test[s]?\\.js$"
+}
