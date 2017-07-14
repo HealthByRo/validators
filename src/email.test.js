@@ -2,7 +2,7 @@ import email from './email';
 
 describe('email', () => {
   it('should be defined', () => {
-    expect(email).toEqual(email);
+    expect(email).toBeDefined();
   });
 
   it('should return error message when email is invalid', () => {
@@ -17,7 +17,7 @@ describe('email', () => {
     expect(email('john.smith@gmail.com')).toBeUndefined();
   });
 
-  it('should not return when email is "john.smith@gmail.com"', () => {
+  it('should not return when email is "john.smith+test@gmail.com"', () => {
     expect(email('john.smith+test@gmail.com')).toBeUndefined();
   });
 });

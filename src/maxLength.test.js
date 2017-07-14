@@ -4,7 +4,7 @@ describe('maxLength', () => {
   const maxLengthValidator = maxLength(10, 'My field');
 
   it('should be defined', () => {
-    expect(maxLength).toEqual(maxLength);
+    expect(maxLength).toBeDefined();
   });
 
   describe('should be a function', () => {

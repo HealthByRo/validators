@@ -4,11 +4,19 @@ describe('passwordFormat', () => {
   const errorMessage = 'Password format invalid (must include at least one lowercase letter and number)';
 
   it('should be defined', () => {
-    expect(passwordFormat).toEqual(passwordFormat);
+    expect(passwordFormat).toBeDefined();
   });
 
   it('should return error message when password has only letters', () => {
+    expect(passwordFormat('ABCdef')).toEqual(errorMessage);
+  });
+
+  it('should return error message when password has only lowercase letters', () => {
     expect(passwordFormat('abcdef')).toEqual(errorMessage);
+  });
+
+  it('should return error message when password has only uppercase letters', () => {
+    expect(passwordFormat('ABCDEF')).toEqual(errorMessage);
   });
 
   it('should return error message when password has only numbers', () => {

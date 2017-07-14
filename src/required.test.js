@@ -35,15 +35,15 @@ describe('required', () => {
     expect(required(() => false)).toBeUndefined();
   });
 
-  it('should return error message when when cvc is 2 chars length', () => {
+  it('should return error message when value is undefined', () => {
     expect(required(undefined)).toEqual(errorMessage);
   });
 
-  it('should return error message when when cvc is 5 chars length', () => {
+  it('should return error message when value is null', () => {
     expect(required(null)).toEqual(errorMessage);
   });
 
-  it('should not return error when cvc is 4 chars length', () => {
+  it('should not return error when value is emty string', () => {
     expect(required('')).toEqual(errorMessage);
   });
 });

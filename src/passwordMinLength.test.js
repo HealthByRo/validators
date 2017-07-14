@@ -16,4 +16,8 @@ describe('cvcRangeLength', () => {
   it('should not return error when text has more then 8 characters', () => {
     expect(passwordMinLength('012345678')).toBeUndefined();
   });
+
+  it('should not return error when text is not filled', () => {
+    expect(passwordMinLength('')).toBeUndefined();
+  });
 });

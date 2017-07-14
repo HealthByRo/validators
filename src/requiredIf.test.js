@@ -1,8 +1,8 @@
 import requiredIf from './requiredIf';
 
 describe('oldPasswordRequired', () => {
-  const firstNameRequired = requiredIf('firstName', 'Last name is required');
-  const errorMessage = 'Last name is required';
+  const firstNameRequired = requiredIf('firstName', 'First name is required');
+  const errorMessage = 'First name is required';
 
   it('should be defined', () => {
     expect(typeof firstNameRequired === 'function').toBeTruthy();

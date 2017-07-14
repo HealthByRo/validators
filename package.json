@@ -16,8 +16,8 @@
   "homepage": "https://bitbucket.org/arabellatech/validators#readme",
   "scripts": {
     "prebuild": "npm run lint && npm run test",
-    "build": "rm -rf lib && babel --presets es2015,stage-0 -d lib/ src/ --ignore \"**/*.test.js\"",
-    "test": "jest --coverage --config=.jest.json",
+    "build": "rm -rf lib && babel -d lib/ src/ --ignore \"**/*.test.js\"",
+    "test": "jest --coverage",
     "test:watch": "./node_modules/.bin/jest --watchAll --silent --config=.jest.json ./src",
     "test:badge": "yarn run test && node ./scripts/coverage.js",
     "lint": "npm run lint:js",

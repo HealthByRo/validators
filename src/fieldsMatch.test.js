@@ -25,7 +25,7 @@ describe('fieldsMatch', () => {
       toJS: () => ({ password: 'abcd1234' }),
     };
 
-    it('should not return error message when firstName is provided and last name', () => {
+    it('should not return error when passwords match', () => {
       expect(matchToPassword('abcd1234', values)).toBeUndefined();
     });
   });

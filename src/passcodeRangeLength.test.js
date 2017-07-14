@@ -2,7 +2,7 @@ import passcodeRangeLength from './passcodeRangeLength';
 
 describe('passcodeRangeLength', () => {
   it('should be defined', () => {
-    expect(passcodeRangeLength).toEqual(passcodeRangeLength);
+    expect(passcodeRangeLength).toBeDefined();
   });
 
   it('should return error message when input has more then 1 characters', () => {

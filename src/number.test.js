@@ -9,7 +9,7 @@ describe('number', () => {
     expect(number('abcd')).toEqual('Must be a number');
   });
 
-  it('should return error message when input has one latter', () => {
+  it('should return error message when input has one letter', () => {
     expect(number('12345a')).toEqual('Must be a number');
   });
 
@@ -23,5 +23,9 @@ describe('number', () => {
 
   it('should not return error message when input is a float number', () => {
     expect(number(12345.02)).toBeUndefined();
+  });
+
+  it('should not return error message when input is a float number as string', () => {
+    expect(number('12345.02')).toBeUndefined();
   });
 });

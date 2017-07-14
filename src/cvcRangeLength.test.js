@@ -8,7 +8,7 @@ describe('cvcRangeLength', () => {
   });
 
   it('should return error message when cvc is 2 chars length', () => {
-    expect(cvcRangeLength('12345')).toEqual(errorMessage);
+    expect(cvcRangeLength('12')).toEqual(errorMessage);
   });
 
   it('should return error message when cvc is 5 chars length', () => {

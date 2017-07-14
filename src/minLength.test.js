@@ -4,7 +4,7 @@ describe('minLength', () => {
   const minLengthValidator = minLength(10, 'My field');
 
   it('should be defined', () => {
-    expect(minLength).toEqual(minLength);
+    expect(minLength).toBeDefined();
   });
 
   describe('should be a function', () => {
@@ -31,7 +31,7 @@ describe('minLength without field name', () => {
     expect(minLengthValidator('0123')).toEqual('Must be 5 characters or more');
   });
 
-  it('should not return error when text has 5 characters', () => {
+  it('should not return error when text has 9 characters', () => {
     expect(minLengthValidator('012345678')).toBeUndefined();
   });
 });

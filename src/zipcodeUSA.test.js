@@ -4,7 +4,7 @@ describe('zipcodeUSA', () => {
   const errorMessage = 'Invalid zipcode.';
 
   it('should be defined', () => {
-    expect(zipcodeUSA).toEqual(zipcodeUSA);
+    expect(zipcodeUSA).toBeDefined();
   });
 
   it('should return error message when zip code has less then 4 digits', () => {
