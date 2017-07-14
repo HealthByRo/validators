@@ -1,23 +1,23 @@
 import requiredIf from './requiredIf';
 
 describe('oldPasswordRequired', () => {
-  const firstNameRequired = requiredIf('firstName', 'First name is required');
-  const errorMessage = 'First name is required';
+  const lastNameRequired = requiredIf('firstName', 'Last name is required');
+  const errorMessage = 'Last name is required';
 
   it('should be defined', () => {
-    expect(typeof firstNameRequired === 'function').toBeTruthy();
+    expect(typeof lastNameRequired === 'function').toBeTruthy();
   });
 
   it('should return error message when firstName is provided but not last name', () => {
-    expect(firstNameRequired(null, { firstName: 'John' })).toEqual(errorMessage);
+    expect(lastNameRequired(null, { firstName: 'John' })).toEqual(errorMessage);
   });
 
   it('should not return error message when firstName is not provided', () => {
-    expect(firstNameRequired(null, {})).toBeUndefined();
+    expect(lastNameRequired(null, {})).toBeUndefined();
   });
 
   it('should not return error message when firstName is provided and last name', () => {
-    expect(firstNameRequired('Smith', { firstName: 'John' })).toBeUndefined();
+    expect(lastNameRequired('Smith', { firstName: 'John' })).toBeUndefined();
   });
 
   describe('when values is immutable object', () => {
@@ -26,7 +26,7 @@ describe('oldPasswordRequired', () => {
     };
 
     it('should not return error message when firstName is provided and last name', () => {
-      expect(firstNameRequired('Smith', values)).toBeUndefined();
+      expect(lastNameRequired('Smith', values)).toBeUndefined();
     });
   });
 });
