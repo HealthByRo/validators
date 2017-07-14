@@ -16,6 +16,10 @@ describe('oldPasswordRequired', () => {
     expect(lastNameRequired(null, {})).toBeUndefined();
   });
 
+  it('should not return error message when lastName is provided but not fistName', () => {
+    expect(lastNameRequired('Smith', {})).toBeUndefined();
+  });
+
   it('should not return error message when firstName is provided and last name', () => {
     expect(lastNameRequired('Smith', { firstName: 'John' })).toBeUndefined();
   });
