@@ -26,6 +26,7 @@ Each validation functions return undefined when validation passed or error messa
  * **email(input)** - checks if email is valid
  * **matchToNewPassword(input, values)** - check if password match to new password (values.newPassword)
  * **matchToPassword(input, values)** - check if password match to new password (values.password)
+ * **oldPasswordRequired(input, values)** - check if `password` exists in the values if `newPassword` exists
  * **number(input)** - check if input is valid number. Note: number as string is still valid number.
  * **passcodeRangeLength(input)** - checks if passcode has 0 or 1 characters
  * **passwordFormat(input)** - check if password has valid format: must include at least one lowercase letter and number 
@@ -42,6 +43,7 @@ Below is list of functions, which creats validation function based on their para
  * **rangeLength(min, max, [label]): fn(value)** - creates validation function which checks if `value` is not shorther than `min` characters and longer than `max` characters
  * **maxLength(max, [label]): fn(value)** - creates validation function which checks if `value` is not longer than `max` characters
  * **minLength(min, [label]): fn(value)** - creates validation function which checks if `value` is not shorther than `min` 
+ * **requiredIf(otherFieldName, errorText): fn(value, values)** - creates validation function which checks if input `value` is filled when value under key `otherFieldName` of `values` exists.
 
 ## Set of validators:
 
