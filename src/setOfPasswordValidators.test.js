@@ -1,23 +1,22 @@
-import cvcRangeLength from './cvcRangeLength';
+import setOfPasswordValidators from './setOfPasswordValidators';
+import required from './required';
+import passwordMinLength from './passwordMinLength';
+import passwordFormat from './passwordFormat';
 
-describe('cvcRangeLength', () => {
+describe('setOfPasswordValidators', () => {
   it('should be defined', () => {
-    expect(cvcRangeLength).toEqual(cvcRangeLength);
+    expect(setOfPasswordValidators).toBeDefined();
   });
 
-  it('should return error message when when cvc is 2 chars length', () => {
-    expect(cvcRangeLength('12345')).toEqual('CVV must be between 3 and 4 characters');
+  it('should has "required" validator', () => {
+    expect(setOfPasswordValidators.indexOf(required)).not.toBe(-1);
   });
 
-  it('should return error message when when cvc is 5 chars length', () => {
-    expect(cvcRangeLength('12345')).toEqual('CVV must be between 3 and 4 characters');
+  it('should has "passwordMinLength" validator', () => {
+    expect(setOfPasswordValidators.indexOf(passwordMinLength)).not.toBe(-1);
   });
 
-  it('should not return error when cvc is 3 chars length', () => {
-    expect(cvcRangeLength('123')).toBeUndefined();
-  });
-
-  it('should not return error when cvc is 4 chars length', () => {
-    expect(cvcRangeLength('1234')).toBeUndefined();
+  it('should has "passwordFormat" validator', () => {
+    expect(setOfPasswordValidators.indexOf(passwordFormat)).not.toBe(-1);
   });
 });
