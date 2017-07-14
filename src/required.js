@@ -1,5 +1,7 @@
 export const required = (value) => {
-  if (!value) {
+  const type = typeof value;
+
+  if (!value && type !== 'boolean' && type !== 'number') {
     return 'Field required';
   }
 
