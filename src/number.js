@@ -5,3 +5,5 @@ export const number = (value) => {
 
   return undefined;
 };
+
+export default number;

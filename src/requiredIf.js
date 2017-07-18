@@ -13,3 +13,5 @@ export const requiredIf = (otherFieldName, errorText) => (value, values) => {
 
   return undefined;
 };
+
+export default requiredIf;
