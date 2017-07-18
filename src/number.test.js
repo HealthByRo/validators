@@ -2,7 +2,7 @@ import number from './number';
 
 describe('number', () => {
   it('should be defined', () => {
-    expect(number).toEqual(number);
+    expect(number).toBeDefined();
   });
 
   it('should return error message when input is not a number', () => {

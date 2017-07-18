@@ -4,7 +4,7 @@ describe('required', () => {
   const errorMessage = 'Field required';
 
   it('should be defined', () => {
-    expect(required).toEqual(required);
+    expect(required).toBeDefined();
   });
 
   it('should not return error message when arugment is zero', () => {
