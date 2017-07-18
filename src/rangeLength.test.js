@@ -17,10 +17,6 @@ describe('rangeLength', () => {
       expect(shortWords('a')).toEqual(errorMessage);
     });
 
-    it('should return error message when word has 1 character', () => {
-      expect(shortWords('a')).toEqual(errorMessage);
-    });
-
     it('should not return error message when word has 2 characters', () => {
       expect(shortWords('ab')).toBeUndefined();
     });
