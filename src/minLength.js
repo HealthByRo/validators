@@ -5,3 +5,5 @@ export const minLength = (min, label) => (value) => {
 
   return undefined;
 };
+
+export default minLength;

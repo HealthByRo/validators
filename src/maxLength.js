@@ -5,3 +5,5 @@ export const maxLength = (max, label) => (value) => {
 
   return undefined;
 };
+
+export default maxLength;

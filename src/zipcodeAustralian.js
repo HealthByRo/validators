@@ -7,3 +7,5 @@ export const zipcodeAustralian = (value) => {
 
   return undefined;
 };
+
+export default zipcodeAustralian;

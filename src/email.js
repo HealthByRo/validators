@@ -7,3 +7,5 @@ export const email = (value) => {
 
   return undefined;
 };
+
+export default email;
