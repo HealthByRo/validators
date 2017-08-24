@@ -1,11 +1,9 @@
-const regexp = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+import {
+  EMAIL_REGEXP,
+  EMAIL_ERROR_MSG,
+} from './contants';
+import matchRegexp from './matchRegexp';
 
-export const email = (value) => {
-  if (value && !regexp.test(value)) {
-    return 'Email format invalid';
-  }
-
-  return undefined;
-};
+export const email = matchRegexp(EMAIL_REGEXP, EMAIL_ERROR_MSG);
 
 export default email;
