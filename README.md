@@ -40,6 +40,7 @@ Each validation functions return undefined when validation passed or error messa
 Below is list of functions, which creats validation function based on their params:
 
  * **fieldsMatch(otherFieldName, errorText): fn(value, values)** - creates validation function which compare `value` with value under `otherFieldName` property in `values` object
+ * **matchRegexp(regexp, errorText): fn(value, values)** - creates validation function which checks if `value` matches `regexp`
  * **rangeLength(min, max, [label]): fn(value)** - creates validation function which checks if `value` is not shorther than `min` characters and longer than `max` characters
  * **maxLength(max, [label]): fn(value)** - creates validation function which checks if `value` is not longer than `max` characters
  * **minLength(min, [label]): fn(value)** - creates validation function which checks if `value` is not shorther than `min` 
