@@ -1,9 +1,9 @@
-export const passwordFormat = (value) => {
-  if (value && (!/^(?=.*[a-z])(?=.*\d).+$/.test(value))) {
-    return 'Password format invalid (must include at least one lowercase letter and number)';
-  }
+import {
+  PASSWORD_FORMAT_REGEXP,
+  PASSWORD_FORMAT_ERROR_MSG,
+} from './contants';
+import matchRegexp from './matchRegexp';
 
-  return undefined;
-};
+export const passwordFormat = matchRegexp(PASSWORD_FORMAT_REGEXP, PASSWORD_FORMAT_ERROR_MSG);
 
 export default passwordFormat;
