@@ -1,11 +1,9 @@
-const regexp = /^\d{4}$/;
+import {
+  ZIPCODE_AUSTRALIAN_REGEXP,
+  ZIPCODE_AUSTRALIAN_ERROR_MSG,
+} from './contants';
+import matchRegexp from './matchRegexp';
 
-export const zipcodeAustralian = (value) => {
-  if (value && !regexp.test(value)) {
-    return 'Invalid zipcode. Should be in "xxxx" format, numbers only.';
-  }
-
-  return undefined;
-};
+export const zipcodeAustralian = matchRegexp(ZIPCODE_AUSTRALIAN_REGEXP, ZIPCODE_AUSTRALIAN_ERROR_MSG);
 
 export default zipcodeAustralian;
