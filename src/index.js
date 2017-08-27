@@ -3,6 +3,7 @@ export email from './email';
 export fieldsMatch from './fieldsMatch';
 export matchToNewPassword from './matchToNewPassword';
 export matchToPassword from './matchToPassword';
+export matchRegexp from './matchRegexp';
 export maxLength from './maxLength';
 export minLength from './minLength';
 export number from './number';
