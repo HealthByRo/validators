@@ -23,7 +23,10 @@
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern lib/",
     "lint:js": "npm run lint:eslint -- . ",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "prerelease": "git checkout master && git pull && git checkout develop && git pull",
+    "release": "npm version",
+    "postrelease": "git push && git push --tags && git checkout master && git pull && git merge develop && git push && git checkout develop"
   },
   "lint-staged": {
     "*.js": "lint:eslint"
