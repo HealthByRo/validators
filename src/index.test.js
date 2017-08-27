@@ -4,6 +4,7 @@ import {
   fieldsMatch,
   matchToNewPassword,
   matchToPassword,
+  matchRegexp,
   maxLength,
   minLength,
   number,
@@ -36,6 +37,10 @@ describe('validators import', () => {
 
   it('matchToPassword should be defined', () => {
     expect(matchToPassword).toBeDefined();
+  });
+
+  it('matchRegexp should be defined', () => {
+    expect(matchRegexp).toBeDefined();
   });
 
   it('maxLength should be defined', () => {
