@@ -19,12 +19,12 @@ describe('required', () => {
     expect(required({})).toBeUndefined();
   });
 
-  it('should not return error message when arugment is boolean false', () => {
-    expect(required(false)).toBeUndefined();
-  });
-
   it('should not return error message when arugment is boolean true', () => {
     expect(required(true)).toBeUndefined();
+  });
+
+  it('should not return error when value is boolean false', () => {
+    expect(required(false)).toEqual(errorMessage);
   });
 
   it('should not return error message when arugment is not empty string', () => {
@@ -43,7 +43,7 @@ describe('required', () => {
     expect(required(null)).toEqual(errorMessage);
   });
 
-  it('should not return error when value is emty string', () => {
+  it('should not return error when value is empty string', () => {
     expect(required('')).toEqual(errorMessage);
   });
 });
