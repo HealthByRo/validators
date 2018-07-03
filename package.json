@@ -1,6 +1,6 @@
 {
   "name": "validators",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "Module with set of validators",
   "main": "lib/index.js",
   "repository": {
