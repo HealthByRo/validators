@@ -27,6 +27,14 @@ describe('min', () => {
     expect(minValueValidator(8)).toEqual('Value must be greater than or equal to 10');
   });
 
+  it('should not return error when value is 10', () => {
+    expect(minValueValidator('10')).toBeUndefined();
+  });
+
+  it('should not return error when value is 10', () => {
+    expect(minValueValidator(10)).toBeUndefined();
+  });
+
   it('should not return error when value is greater than 10', () => {
     expect(minValueValidator('12')).toBeUndefined();
   });

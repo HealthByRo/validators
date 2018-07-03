@@ -19,6 +19,14 @@ describe('max', () => {
     expect(maxValueValidator(12)).toEqual('Value must be less than or equal to 10');
   });
 
+  it('should not return error when value is 10', () => {
+    expect(maxValueValidator('10')).toBeUndefined();
+  });
+
+  it('should not return error when value is 10', () => {
+    expect(maxValueValidator(10)).toBeUndefined();
+  });
+
   it('should not return error when value is less than 10', () => {
     expect(maxValueValidator('9')).toBeUndefined();
   });
