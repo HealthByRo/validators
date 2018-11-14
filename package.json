@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/arabellatech/validators.git"
+    "url": "git+ssh://git@bitbucket.org/healthbyro/validators.git"
   },
   "keywords": [
     "validators",
@@ -13,7 +13,7 @@
   ],
   "author": "Arabella Front-End Team",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/arabellatech/validators#readme",
+  "homepage": "https://bitbucket.org/healthbyro/validators#readme",
   "scripts": {
     "prebuild": "npm run lint && npm run test",
     "build": "rm -rf lib && babel -d lib/ src/ --ignore \"**/*.test.js\"",
