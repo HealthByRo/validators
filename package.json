@@ -1,19 +1,16 @@
 {
   "name": "validators",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "Module with set of validators",
   "main": "lib/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/healthbyro/validators.git"
-  },
+  "repository": "github:HealthByRo/validators",
   "keywords": [
     "validators",
     "validation"
   ],
   "author": "Arabella Front-End Team",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/healthbyro/validators#readme",
+  "homepage": "https://github.com/HealthByRo/validators/",
   "scripts": {
     "prebuild": "npm run lint && npm run test",
     "build": "rm -rf lib && babel -d lib/ src/ --ignore \"**/*.test.js\"",
