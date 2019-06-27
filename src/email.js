@@ -1,5 +1,14 @@
 import { EMAIL_ERROR_MSG } from './constants';
-import matchRegexp from './matchRegexp';
+
+export const matchRegexp = (regexp, errorMsg) => (value) => {
+  const email = value.trim();
+
+  if (email && !regexp.test(email)) {
+    return errorMsg;
+  }
+
+  return undefined;
+};
 
 export const EMAIL_REGEXP = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
