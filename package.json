@@ -1,6 +1,6 @@
 {
   "name": "validators",
-  "version": "2.3.5",
+  "version": "2.3.6",
   "description": "Module with set of validators",
   "main": "lib/index.js",
   "repository": "github:HealthByRo/validators",
